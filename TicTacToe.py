@@ -109,4 +109,34 @@ if(q=="start"):
         #Main game loop
         print("Welcome to Tic Tac Toe, to win complete a straight line of your letter (Diagonal, Horizontal, Vertical). The board has positions 1-9 starting at the top left.")
         printBoard()
-    
+        
+        while not(isBoardFull(board)):
+            if not(isWinner(board,'O')):
+                playerMove()
+                printBoard()
+            else:
+                print('Computer get point')
+                global computer_point
+                computer_point=computer_point+1
+                break
+
+            if not(isWinner(board, 'X')):
+                move = compMove()
+                if move == 0:
+                    print('The Game is Draw! No more spaces left to move.')
+                else:
+                    insertBoard('O', move)
+                    print('Computer placed an "O" in position', move, ':')
+                    printBoard()
+            else:
+                print('User get point')
+                global human_point
+                human_point=human_point+1
+                break
+
+
+        if isBoardFull(board):
+            print('The Game is Draw! No more spaces left to move.')
+
+    main()
+
