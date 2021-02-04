@@ -139,4 +139,25 @@ if(q=="start"):
             print('The Game is Draw! No more spaces left to move.')
 
     main()
+    
+    while True:
+        answer = input('Do you want to play again? (Y/N)')
+        if answer.lower() == 'y' or answer.lower == 'yes':
+            board = [' ' for x in range(10)]
+            print('-----------------------------------')
+            main()
+        else:
+            break
+else:
+    computer_point=computer_point+1
+if(human_point>computer_point):
+    print("Human is won the Game")
+elif(human_point<computer_point):
+    print("Computer is won the Game")
+else:
+    print("The Game is Draw")
+
+p=input("Type 'scoreboard' for see the how many times win the computer or user otherwise type any something: ")
+if(p=="scoreboard"):
+    print("computer wins",computer_point,"times","while Human wins",human_point,"times")
 
