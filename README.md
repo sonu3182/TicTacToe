@@ -2,7 +2,7 @@
 or
 In windows need to install any latest python interpretor.
 
-2. Clone my code through git clone command like "git clone " 
+2. Clone my code through git command like "git clone https://github.com/sonu3182/TicTacToe.git" 
 
 3. Run a TicTacToe.py file.
 
